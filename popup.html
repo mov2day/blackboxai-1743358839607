@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="popup.js" defer></script>
+  <style>
+    body {
+      width: 300px;
+      padding: 1rem;
+    }
+    textarea {
+      resize: none;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <div class="flex flex-col gap-4">
+    <h1 class="text-xl font-bold text-gray-800">XPath Grabber</h1>
+    
+    <div class="flex flex-col gap-2">
+      <label class="text-sm font-medium text-gray-700">Selected Element XPath:</label>
+      <textarea id="xpath-output" 
+                class="w-full p-2 border border-gray-300 rounded-md" 
+                rows="4" 
+                readonly></textarea>
+    </div>
+
+    <button id="download-btn" 
+            class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">
+      Download XPath
+    </button>
+
+    <p id="error-msg" class="text-red-500 text-sm hidden">
+      No element selected. Please select an element on the page first.
+    </p>
+  </div>
+</body>
+</html>
